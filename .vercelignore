@@ -1,0 +1,58 @@
+# Node modules
+node_modules
+**/node_modules
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
+.pytest_cache
+.mypy_cache
+
+# Environment files (will be set in Vercel dashboard)
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs
+*.log.*
+
+# Upload directory (use cloud storage instead)
+backend/uploads
+uploads
+
+# Tests
+tests
+**/tests
+*.test.js
+*.test.py
+
+# Documentation
+README.md
+docs
+
+# Git
+.git
+.gitignore
