@@ -594,15 +594,64 @@ The following features require paid third-party services and were **skipped** as
 
 ## 📦 Deployment
 
-### Current Deployment (Kubernetes)
+### Vercel Deployment (100% FREE) ⭐ Recommended
 
-The application is deployed on Kubernetes with:
+Deploy to Vercel with MongoDB Atlas - completely free!
+
+**What's Included:**
+- ✅ Frontend on Vercel (React)
+- ✅ Backend as Vercel Serverless Functions (FastAPI)
+- ✅ MongoDB Atlas FREE tier (512MB)
+- ✅ All features working
+- ✅ Zero cost for small to medium scale
+
+**Quick Start:**
+
+1. **Setup MongoDB Atlas (Free)**
+   - Sign up at https://www.mongodb.com/cloud/atlas/register
+   - Create M0 FREE cluster (512MB)
+   - Get connection string
+
+2. **Deploy to Vercel**
+   ```bash
+   # Install Vercel CLI
+   npm install -g vercel
+   
+   # Deploy
+   cd /app
+   vercel
+   ```
+
+3. **Add Environment Variables in Vercel Dashboard**
+   - `MONGO_URL`: Your MongoDB Atlas connection string
+   - `DB_NAME`: `safespace_db`
+   - `JWT_SECRET`: Generate using `python3 generate_jwt_secret.py`
+   - `CORS_ORIGINS`: `*`
+   - `REACT_APP_BACKEND_URL`: Your Vercel URL
+
+4. **Create Admin User**
+   ```bash
+   python3 create_admin.py
+   ```
+
+5. **Seed Legal Resources (Optional)**
+   ```bash
+   python3 seed_legal_resources.py
+   ```
+
+📖 **Full Guide**: See [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md) for detailed step-by-step instructions.
+
+---
+
+### Alternative: Kubernetes Deployment
+
+The application can also be deployed on Kubernetes:
 - Backend: FastAPI on port 8001
 - Frontend: React on port 3000
 - Database: MongoDB on port 27017
 - Ingress: Handles routing and SSL
 
-### Environment Variables
+**Environment Variables**
 
 **Backend (.env)**
 ```env
